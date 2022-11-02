@@ -94,6 +94,25 @@ class Product_Init :
                                                         case "SDE" :
                                                             ICX_XCC_AP_SDE = Product_File("ICX","SDE","XCC","AP")
                                                             self.ObjList.append(ICX_XCC_AP_SDE)
+                                    match flavor[4:] :
+                                        case "MCC" :
+                                            match component :
+                                                case  "MB" :
+                                                    match insertion[4:] :
+                                                        case "MAIN" :
+                                                            ICX_MCC_MB_MAIN = Product_File("ICX","MAIN","MCC","MB")
+                                                            self.ObjList.append(ICX_MCC_MB_MAIN)
+                                                        case "SDE" :
+                                                            ICX_MCC_MB_SDE = Product_File("ICX","SDE","MCC","MB")
+                                                            self.ObjList.append(ICX_MCC_MB_SDE)
+                                                case "AP" :
+                                                    match insertion[4:] :
+                                                        case "MAIN" :
+                                                            ICX_MCC_AP_MAIN = Product_File("ICX","MAIN","MCC","AP")
+                                                            self.ObjList.append(ICX_MCC_AP_MAIN)
+                                                        case "SDE" :
+                                                            ICX_MCC_AP_SDE = Product_File("ICX","SDE","MCC","AP")
+                                                            self.ObjList.append(ICX_MCC_AP_SDE)
                                 case "SPR" :
                                     match flavor[4:] :
                                         case "XCC" :
@@ -200,24 +219,24 @@ class Product_Init :
                                                         case "SDE" :
                                                             EMR_XCC_AP_SDE = Product_File("EMR","SDE","XCC","AP")
                                                             self.ObjList.append(EMR_XCC_AP_SDE)
-                                        case "MCC" :
+                                        case "HCC" :
                                             match component :
                                                 case  "MB" :
                                                     match insertion[4:] :
                                                         case "MAIN" :
-                                                            EMR_MCC_MB_MAIN = Product_File("EMR","MAIN","MCC","MB")
-                                                            self.ObjList.append(EMR_MCC_MB_MAIN)
+                                                            EMR_HCC_MB_MAIN = Product_File("EMR","MAIN","HCC","MB")
+                                                            self.ObjList.append(EMR_HCC_MB_MAIN)
                                                         case "SDE" :
-                                                            EMR_MCC_MB_SDE = Product_File("EMR","SDE","MCC","MB")
-                                                            self.ObjList.append(EMR_MCC_MB_SDE)
+                                                            EMR_HCC_MB_SDE = Product_File("EMR","SDE","HCC","MB")
+                                                            self.ObjList.append(EMR_HCC_MB_SDE)
                                                 case "AP" :
                                                     match insertion[4:] :
                                                         case "MAIN" :
-                                                            EMR_MCC_AP_MAIN = Product_File("EMR","MAIN","MCC","AP")
-                                                            self.ObjList.append(EMR_MCC_AP_MAIN)
+                                                            EMR_HCC_AP_MAIN = Product_File("EMR","MAIN","HCC","AP")
+                                                            self.ObjList.append(EMR_HCC_AP_MAIN)
                                                         case "SDE" :
-                                                            EMR_MCC_AP_SDE = Product_File("EMR","SDE","MCC","AP")
-                                                            self.ObjList.append(EMR_MCC_AP_SDE)
+                                                            EMR_HCC_AP_SDE = Product_File("EMR","SDE","HCC","AP")
+                                                            self.ObjList.append(EMR_HCC_AP_SDE)
                                 case "GNR" : #Verify other flavors UCC y XCC
                                     match flavor[4:] :
                                         case "XCC" :
@@ -378,6 +397,25 @@ class Product_Init :
                                                 case "SDE" :
                                                     ICX_XCC_AP_SDE = Product_File("ICX","SDE","XCC","AP")
                                                     self.ObjList.append(ICX_XCC_AP_SDE)
+                            match flavor :
+                                case "HCC" :
+                                    match component :
+                                        case  "MB" :
+                                            match insertion :
+                                                case "MAIN" :
+                                                    ICX_HCC_MB_MAIN = Product_File("ICX","MAIN","HCC","MB")
+                                                    self.ObjList.append(ICX_HCC_MB_MAIN)
+                                                case "SDE" :
+                                                    ICX_HCC_MB_SDE = Product_File("ICX","SDE","HCC","MB")
+                                                    self.ObjList.append(ICX_HCC_MB_SDE)
+                                        case "AP" :
+                                            match insertion :
+                                                case "MAIN" :
+                                                    ICX_HCC_AP_MAIN = Product_File("ICX","MAIN","HCC","AP")
+                                                    self.ObjList.append(ICX_HCC_AP_MAIN)
+                                                case "SDE" :
+                                                    ICX_HCC_AP_SDE = Product_File("ICX","SDE","HCC","AP")
+                                                    self.ObjList.append(ICX_HCC_AP_SDE)
                         case "SPR" :
                             match flavor :
                                 case "XCC" :
