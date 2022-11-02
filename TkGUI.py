@@ -16,7 +16,7 @@ def productParameters(product) :
     #print(product)
     GeneralDict = {"CLX":{"Name":"CLX","Components":["MB","AP"],"Insertions":["MAIN"], "Flavors":["LCC","HCC","XCC"]},
                         "CPX":{"Name":"CPX","Components":["MB","AP"],"Insertions":["MAIN"], "Flavors":["XCP"]}, 
-                        "ICX":{"Name":"ICX","Components":["MB","AP"],"Insertions":["MAIN","SDE"], "Flavors":["XCP"]},
+                        "ICX":{"Name":"ICX","Components":["MB","AP"],"Insertions":["MAIN","SDE"], "Flavors":["XCC","HCC"]},
                         "SPR":{"Name":"SPR","Components":["MB","AP"],"Insertions":["MAIN","CXL","SDE"], "Flavors":["XCC","MCC","112L","WMCC"]},
                         "EMR":{"Name":"EMR","Components":["MB","AP"],"Insertions":["MAIN","SDE"], "Flavors":["XCC","MCC"]},      
                         "GNR":{"Name":"GNR","Components":["MB","AP"],"Insertions":["MAIN","SDE"], "Flavors":["DE","UCC","XCC"]},      
